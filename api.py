@@ -37,16 +37,23 @@ app.add_middleware(
 load_dotenv() # Loads environment variables from a .env file if present for local development
 
 
-#------------------------#
-#   DEFINE DATA MODELS   #
-#------------------------#
+#-----------------#
+#   DATA MODELS   #
+#-----------------#
 
 # Define any data models here
 
 
-#---------------------------#
-#   SANITY CHECK ENDPOINT   #
-#---------------------------#
+#-------------------#
+#   HELPER METHODS  #
+#-------------------#
+
+# Insert any helper methods here
+
+
+#---------------#
+#   ENDPOINTS   #
+#---------------#
 
 # Sanity check endpoint to ensure server is accessible
 @app.get("/")
