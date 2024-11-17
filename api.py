@@ -119,3 +119,32 @@ async def create_user(user_create_request: UserCreateRequest):
     print(created_user)
 
     return db_response_to_user_info(created_user)
+
+# Go through SimpleFIN Bridge setup token flow for user
+@app.post("/setup_simplefin")
+async def setup_simplefin(user_simplefin_setup: UserSimpleFINSetup):
+    # Check if user exists
+    user_auth_details = user_simplefin_setup.auth_details
+    if not app.users.count_documents({ "_id": user_auth_details.username }):
+        raise HTTPException(status_code=404, detail="User does not exist")
+    user_record = app.users.find_one({ "_id": user_auth_details.username })
+    print(user_record)
+    
+    # Check if given hashed password matches user's
+    db_password_hash = user_record['password_hash']
+    try:
+        if not verify_password(hasher, user_auth_details.password, db_password_hash):
+            raise HTTPException(status_code=403, detail="Incorrect password provided")
+    except (VerifyMismatchError, VerificationError) as _v:
+        raise HTTPException(status_code=403, detail="Incorrect password provided")
+    print(f"User {user_auth_details.username} authenticated successfully!")
+
+    # Exchange setup token for access token
+    simplefin_access_url = exchange_simplefin_setup(user_simplefin_setup.simplefin_setup_token)
+
+    # Add access url to database
+    app.users.update_one({ "_id": user_auth_details.username }, { "$set": { "simplefin_access_url": simplefin_access_url } })
+
+    return {
+        "message": f"Added SimpleFIN access URL for {user_auth_details.username} successfully!"
+    }

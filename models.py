@@ -20,6 +20,6 @@ class UserAuthDetails(BaseModel):
     username: str
     password: str
 
-class UserAccessURLUpdate(BaseModel):
+class UserSimpleFINSetup(BaseModel):
     auth_details: UserAuthDetails
-    simplefin_access_url: str
+    simplefin_setup_token: str
