@@ -68,7 +68,7 @@ def shutdown_db_client():
 @app.get("/")
 async def sanity_check():
     return {
-        "message": "Welcome to the Pufferfish API! To read more about the available endpoints, visit https://ADD API URL HERE/docs"
+        "message": "Welcome to the Pufferfish API! To read more about the available endpoints, visit https://pufferfish-xurta.ondigitalocean.app/docs"
     }
 
 # Check for valid credentials
