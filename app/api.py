@@ -92,6 +92,24 @@ async def credential_check(user_auth_details: UserAuthDetails):
         "message": f"Authenticated {user_record['friendly_name']} successfully!"
     }
 
+# Get user's friendly name
+@app.post("/get_friendly_name")
+async def get_friendly_name(user_auth_details: UserAuthDetails):
+    # Check if user exists
+    if not app.users.count_documents({ "_id": user_auth_details.username }):
+        raise HTTPException(status_code=404, detail="User does not exist")
+    user_record = app.users.find_one({ "_id": user_auth_details.username })
+    
+    # Check if given hashed password matches user's
+    db_password_hash = user_record['password_hash']
+    try:
+        if not verify_password(hasher, user_auth_details.password, db_password_hash):
+            raise HTTPException(status_code=403, detail="Incorrect password provided")
+    except (VerifyMismatchError, VerificationError) as _v:
+        raise HTTPException(status_code=403, detail="Incorrect password provided")
+    
+    return user_record['friendly_name']
+
 # Create a new user
 @app.post("/create_user")
 async def create_user(user_create_request: UserCreateRequest):
