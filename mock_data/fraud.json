@@ -1,0 +1,378 @@
+{
+    "errors": [],
+    "accounts": [
+        {
+            "org": {
+                "domain": "beta-bridge.simplefin.org",
+                "sfin-url": "https://beta-bridge.simplefin.org/simplefin",
+                "name": "SimpleFIN Demo",
+                "url": "https://beta-bridge.simplefin.org",
+                "id": "simplefin.demoorg"
+            },
+            "id": "Ethan Checking",
+            "name": "Ethan's Checking",
+            "currency": "USD",
+            "balance": "4748.31",
+            "available-balance": "4692.52",
+            "balance-date": 1731797104,
+            "transactions": [
+                {
+                    "id": "1713912304",
+                    "posted": 1713912304,
+                    "amount": "-138.57",
+                    "description": "Utility bill",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1731537904",
+                    "posted": 1731537904,
+                    "amount": "-487.50",
+                    "description": "Zelle",
+                    "payee": "Money to Kevin",
+                    "memo": "Person-to-Person"
+                },
+                {
+                    "id": "1709419504",
+                    "posted": 1709419504,
+                    "amount": "-41.90",
+                    "description": "Gas station",
+                    "payee": "Racetrac",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1728341104",
+                    "posted": 1728341104,
+                    "amount": "-141.11",
+                    "description": "Grocery store",
+                    "payee": "Kroger",
+                    "memo": "Groceries"
+                },
+                {
+                    "id": "1701643504",
+                    "posted": 1701643504,
+                    "amount": "-180.02",
+                    "description": "Online shopping",
+                    "payee": "Amazon",
+                    "memo": "Shopping"
+                },
+                { 
+                    "id": "1701643506",
+                    "posted": 1701643506,
+                    "amount": "-180.02",
+                    "description": "Online shopping",
+                    "payee": "Amazon",
+                    "memo": "Shopping"
+                },
+                {
+                    "id": "1720219504",
+                    "posted": 1720219504,
+                    "amount": "-51.40",
+                    "description": "Gas station",
+                    "payee": "7/11",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1720259804",
+                    "posted": 1720259804,
+                    "amount": "-4288.40",
+                    "description": "Online shopping",
+                    "payee": "Beijing Electronics Co.",
+                    "memo": "Electronics purchase"
+                },
+                {
+                    "id": "1713566704",
+                    "posted": 1713566704,
+                    "amount": "-51.23",
+                    "description": "Gas station",
+                    "payee": "Racetrac",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1700606704",
+                    "posted": 1700606704,
+                    "amount": "-49.83",
+                    "description": "Gas station",
+                    "payee": "7/11",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1724798704",
+                    "posted": 1724798704,
+                    "amount": "-170.35",
+                    "description": "Utility purchase",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1717800304",
+                    "posted": 1717800304,
+                    "amount": "-692.74",
+                    "description": "Online shopping",
+                    "payee": "Shanghai International",
+                    "memo": "Shopping"
+                },
+                {
+                    "id": "1721083504",
+                    "posted": 1721083504,
+                    "amount": "-193.10",
+                    "description": "Restaurant",
+                    "payee": "Cheesecake Factory",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1723502704",
+                    "posted": 1723502704,
+                    "amount": "-37.31",
+                    "description": "Gas station",
+                    "payee": "Racetrac",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1716763504",
+                    "posted": 1716763504,
+                    "amount": "-74.07",
+                    "description": "Online shopping",
+                    "payee": "Walmart",
+                    "memo": "Electronics purchase"
+                },
+                {
+                    "id": "1704321904",
+                    "posted": 1704321904,
+                    "amount": "-88.47",
+                    "description": "Grocery store",
+                    "payee": "Local Grocery",
+                    "memo": "Groceries"
+                },
+                {
+                    "id": "1722415904",
+                    "posted": 1722415904,
+                    "amount": "-10.93",
+                    "description": "Online shopping",
+                    "payee": "Amazon",
+                    "memo": "Shopping"
+                },
+                {
+                    "id": "1702421104",
+                    "posted": 1702421104,
+                    "amount": "-6883.98",
+                    "description": "College Tuition",
+                    "payee": "University of Houston",
+                    "memo": "Education"
+                },
+                {
+                    "id": "1709246704",
+                    "posted": 1709246704,
+                    "amount": "-177.36",
+                    "description": "Utility purchase",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1706741104",
+                    "posted": 1706741104,
+                    "amount": "-60.93",
+                    "description": "Online shopping",
+                    "payee": "Amazon",
+                    "memo": "Electronics purchase"
+                },
+                {
+                    "id": "1717800304",
+                    "posted": 1717800304,
+                    "amount": "-186.67",
+                    "description": "Grocery store",
+                    "payee": "WholeFoods",
+                    "memo": "Food purchase"
+                },
+                {
+                    "id": "1701297904",
+                    "posted": 1701297904,
+                    "amount": "-175.82",
+                    "description": "Grocery store",
+                    "payee": "Costco",
+                    "memo": "Food purchase"
+                },
+                {
+                    "id": "1720046704",
+                    "posted": 1720046704,
+                    "amount": "-63.67",
+                    "description": "Gas station",
+                    "payee": "Racetrac",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1724193904",
+                    "posted": 1724193904,
+                    "amount": "-83.70",
+                    "description": "Utility bill",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1726785904",
+                    "posted": 1726785904,
+                    "amount": "-300.69",
+                    "description": "Online shopping",
+                    "payee": "Beijing Electronics Co.",
+                    "memo": "Electronics purchase"
+                },
+                {
+                    "id": "1726785904",
+                    "posted": 1726785904,
+                    "amount": "-60.69",
+                    "description": "Online shopping",
+                    "payee": "Amazon",
+                    "memo": "Shopping"
+                },
+                {
+                    "id": "1711665904",
+                    "posted": 1711665904,
+                    "amount": "-83.86",
+                    "description": "Gas station",
+                    "payee": "7/11",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1709678704",
+                    "posted": 1709678704,
+                    "amount": "-111.58",
+                    "description": "Restaurant",
+                    "payee": "Local Resstaurant",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1722984304",
+                    "posted": 1722984304,
+                    "amount": "-171.51",
+                    "description": "Utility purchase",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1720305904",
+                    "posted": 1720305904,
+                    "amount": "-43.91",
+                    "description": "Restaurant",
+                    "payee": "Cheesecake Factory",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1700261104",
+                    "posted": 1700261104,
+                    "amount": "-21.95",
+                    "description": "Restaurant",
+                    "payee": "Local Resstaurant",
+                    "memo": "Lunch"
+                },
+                {
+                    "id": "1705531504",
+                    "posted": 1705531504,
+                    "amount": "-122.49",
+                    "description": "Grocery store",
+                    "payee": "Local Grocery",
+                    "memo": "Food purchase"
+                },
+                {
+                    "id": "1700865904",
+                    "posted": 1700865904,
+                    "amount": "-13.40",
+                    "description": "Restaurant",
+                    "payee": "Local Resstaurant",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1703025904",
+                    "posted": 1703025904,
+                    "amount": "-183.00",
+                    "description": "Aviation Fees",
+                    "payee": "American Airlines",
+                    "memo": "Two-way Flight"
+                },
+                {
+                    "id": "1700693104",
+                    "posted": 1700693104,
+                    "amount": "-63.47",
+                    "description": "Gas station",
+                    "payee": "Racetrac",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1707259504",
+                    "posted": 1707259504,
+                    "amount": "-46.45",
+                    "description": "Restaurant",
+                    "payee": "Local Resstaurant",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1707259504",
+                    "posted": 1707259504,
+                    "amount": "-46.45",
+                    "description": "Restaurant",
+                    "payee": "Local Resstaurant",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1729291504",
+                    "posted": 1729291504,
+                    "amount": "-111.11",
+                    "description": "Utility bill",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1722293104",
+                    "posted": 1722293104,
+                    "amount": "-51.69",
+                    "description": "Gas station",
+                    "payee": "7/11",
+                    "memo": "Fuel"
+                },
+                {
+                    "id": "1714085104",
+                    "posted": 1714085104,
+                    "amount": "-93.99",
+                    "description": "Utility bill",
+                    "payee": "Electric Company",
+                    "memo": "Electricity bill"
+                },
+                {
+                    "id": "1730328304",
+                    "posted": 1730328304,
+                    "amount": "-46.69",
+                    "description": "Restaurant",
+                    "payee": "Local Resstaurant",
+                    "memo": "Dinner"
+                },
+                {
+                    "id": "1709678704",
+                    "posted": 1709678704,
+                    "amount": "-185.97",
+                    "description": "Aviation Fees",
+                    "payee": "American Airlines",
+                    "memo": "Two-way Flight"
+                },
+                {
+                    "id": "1709678704",
+                    "posted": 1709678704,
+                    "amount": "-164.87",
+                    "description": "Hotel Fee",
+                    "payee": "Holiday Inn",
+                    "memo": "Hotel"
+                },
+                {
+                    "id": "1726440304",
+                    "posted": 1726440304,
+                    "amount": "-193.22",
+                    "description": "Grocery store",
+                    "payee": "Local Grocery",
+                    "memo": "Groceries"
+                }
+            ],
+            "holdings": []
+        }
+    ],
+    "x-api-message": [
+        "Provide a 'start-date' parameter to receive transactions prior to yesterday"
+    ]
+}

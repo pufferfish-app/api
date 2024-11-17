@@ -23,3 +23,19 @@ class UserAuthDetails(BaseModel):
 class UserSimpleFINSetup(BaseModel):
     auth_details: UserAuthDetails
     simplefin_setup_token: str
+
+class Transaction(BaseModel):
+    id: str
+    posted: int
+    amount: str
+    description: str
+    payee: str
+    memo: str
+
+class FrontpageData(BaseModel):
+    account_name: str
+    balance: str
+    available_balance: str
+    currency: str
+    balance_date: int
+    recent_transactions: list[Transaction]
