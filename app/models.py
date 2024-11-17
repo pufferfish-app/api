@@ -43,3 +43,8 @@ class FrontpageData(BaseModel):
 class PossibleFraudInstance(BaseModel):
     transactions: list[Transaction]
     fraud_type: str # duplicate, suspicious_payee, large_p2p
+
+class PossibleFraudSummarizeRequest(BaseModel):
+    auth_details: UserAuthDetails
+    possible_fraud_instance: PossibleFraudInstance
+    
