@@ -16,7 +16,7 @@ def db_response_to_user_info(db_response: dict) -> UserInfo:
     return user_info
 
 def exchange_simplefin_setup(simplefin_setup_token: str) -> str:
-    claim_url = simplefin_setup_token.decode('base64')
+    claim_url = b64decode(simplefin_setup_token)
     print(f"Received SimpleFIN claim URL: {claim_url}")
     response = requests.post(claim_url)
     if not response.ok:
