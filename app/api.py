@@ -15,6 +15,7 @@ from argon2.exceptions import VerificationError, VerifyMismatchError
 
 from models import *
 from helpers import *
+from detection import *
 
 
 #------------------------#
@@ -198,3 +199,31 @@ async def get_transactions(user_auth_details: UserAuthDetails):
     transaction_dicts = simplefin_data["accounts"][0]["transactions"]
     transactions = import_transactions_from_dict(transaction_dicts)
     return transactions
+
+# Scan for possibly fraudulent transactions
+@app.post("/detect_fraud")
+async def detect_fraud(user_auth_details: UserAuthDetails):
+    # Check if user exists
+    if not app.users.count_documents({ "_id": user_auth_details.username }):
+        raise HTTPException(status_code=404, detail="User does not exist")
+    user_record = app.users.find_one({ "_id": user_auth_details.username })
+    
+    # Check if given hashed password matches user's
+    db_password_hash = user_record['password_hash']
+    try:
+        if not verify_password(hasher, user_auth_details.password, db_password_hash):
+            raise HTTPException(status_code=403, detail="Incorrect password provided")
+    except (VerifyMismatchError, VerificationError) as _v:
+        raise HTTPException(status_code=403, detail="Incorrect password provided")
+    
+    print(f"Authenticated {user_record['friendly_name']} successfully!")
+    
+    # Check if user has a SimpleFIN access url
+    if not user_record['simplefin_access_url']:
+        raise HTTPException(status_code=403, detail="User does not have a SimpleFIN access URL")
+    
+    simplefin_data = get_simplefin_data(user_record['simplefin_access_url'])
+    transaction_dicts = simplefin_data["accounts"][0]["transactions"]
+    transactions = import_transactions_from_dict(transaction_dicts)
+    possible_fraud_instances = detect_all(transactions)
+    return possible_fraud_instances

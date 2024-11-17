@@ -39,3 +39,7 @@ class FrontpageData(BaseModel):
     currency: str
     balance_date: int
     recent_transactions: list[Transaction]
+
+class PossibleFraudInstance(BaseModel):
+    transactions: list[Transaction]
+    fraud_type: str # duplicate, suspicious_payee, large_p2p
