@@ -1,9 +1,9 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b336b7d7-df3c-401d-bd56-eaac242d2836" width="512">
-  <h1 align="center">Pufferfish Infrastructure</h1>
+  <h1 align="center">Pufferfish API</h1>
 </p>
 
-<p align="center"><b>Backend IaC that powers the Pufferfish app</b></p>
+<p align="center"><b>FastAPI Backend that powers the Pufferfish app</b></p>
 
 ## What is in this repo?
 
