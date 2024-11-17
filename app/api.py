@@ -72,7 +72,7 @@ async def sanity_check():
     }
 
 # Check for valid credentials
-@app.get("/credential_check")
+@app.post("/credential_check")
 async def credential_check(user_auth_details: UserAuthDetails):
     # Check if user exists
     if not app.users.count_documents({ "_id": user_auth_details.username }):
@@ -148,7 +148,7 @@ async def setup_simplefin(user_simplefin_setup: UserSimpleFINSetup):
     }
 
 # Get frontpage data
-@app.get("/frontpage_data")
+@app.post("/frontpage_data")
 async def frontpage_data(user_auth_details: UserAuthDetails):
     # Check if user exists
     if not app.users.count_documents({ "_id": user_auth_details.username }):
@@ -173,7 +173,7 @@ async def frontpage_data(user_auth_details: UserAuthDetails):
     return frontpage_data
 
 # Get all transactions
-@app.get("/transactions")
+@app.post("/transactions")
 async def get_transactions(user_auth_details: UserAuthDetails):
     # Check if user exists
     if not app.users.count_documents({ "_id": user_auth_details.username }):
